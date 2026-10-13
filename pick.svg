@@ -1,5 +1,5 @@
 
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400" viewBox="0 0 600 400">
   <foreignObject x="0" y="0" width="600" height="400">
     <div xmlns="http://www.w3.org/1999/xhtml">
       <style>
@@ -9,49 +9,50 @@
           width: 600px;
           height: 400px;
           padding: 35px;
-          background: #0f1117;
-          color: #f3f4f6;
+          background: #10131a;
+          color: #f5f5f5;
           font-family: Arial, sans-serif;
           text-align: center;
         }
-        h2 { margin: 12px 0; font-size: 27px; }
-        p { color: #9ca3af; font-size: 14px; }
-        .options { display: flex; gap: 16px; margin-top: 35px; }
+        h2 { font-size: 28px; margin: 12px 0; }
+        p { color: #a5adbd; }
+        .options { display: flex; gap: 18px; margin-top: 38px; }
         a {
           flex: 1;
-          padding: 28px 12px;
-          border: 1px solid #303642;
+          padding: 30px 10px;
+          background: #1c2230;
+          border: 1px solid #343d50;
           border-radius: 14px;
-          background: #191d27;
           color: white;
           text-decoration: none;
-          font-size: 17px;
+          font-size: 18px;
           font-weight: bold;
-          transition: .2s;
         }
         a:hover {
-          background: #252c3a;
-          border-color: #818cf8;
-          transform: translateY(-3px);
+          background: #29344a;
+          border-color: #879bff;
         }
-        .icon { display: block; font-size: 32px; margin-bottom: 14px; }
-        .hint { margin-top: 25px; font-size: 12px; color: #737b8c; }
+        .icon { display: block; font-size: 38px; margin-bottom: 18px; }
+        .hint { margin-top: 28px; color: #7f899d; font-size: 12px; }
       </style>
 
       <div class="page">
         <h2>Choose a page</h2>
-        <p>Select which page you want to open.</p>
+        <p>Which page would you like to open?</p>
+
         <div class="options">
-          <a href="https://esm.sh/gh/theofficalnothing-arch/securly@c4f9efe/duckmath.svg" target="_top">
+          <a href="https://esm.sh/gh/theofficalnothing-arch/securly@main/duckmath.svg" target="_top">
             <span class="icon">🦆</span>
             DuckMath
           </a>
-          <a href="https://esm.sh/gh/theofficalnothing-arch/securly@c4f9efe/securly.svg" target="_top">
+
+          <a href="https://esm.sh/gh/theofficalnothing-arch/securly@main/securly.svg" target="_top">
             <span class="icon">🔒</span>
             Securly
           </a>
         </div>
-        <div class="hint">Select an option to continue</div>
+
+        <div class="hint">Click a choice to continue</div>
       </div>
     </div>
   </foreignObject>

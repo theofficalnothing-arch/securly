@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <foreignObject x="0" y="0" width="600" height="400">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <style>
+        * { box-sizing: border-box; }
+        body { margin: 0; }
+        .page {
+          width: 600px;
+          height: 400px;
+          padding: 35px;
+          background: #0f1117;
+          color: #f3f4f6;
+          font-family: Arial, sans-serif;
+          text-align: center;
+        }
+        h2 { margin: 12px 0; font-size: 27px; }
+        p { color: #9ca3af; font-size: 14px; }
+        .options {
+          display: flex;
+          gap: 16px;
+          margin-top: 35px;
+        }
+        a {
+          flex: 1;
+          padding: 28px 12px;
+          border: 1px solid #303642;
+          border-radius: 14px;
+          background: #191d27;
+          color: white;
+          text-decoration: none;
+          font-size: 17px;
+          font-weight: bold;
+          transition: .2s;
+        }
+        a:hover {
+          background: #252c3a;
+          border-color: #818cf8;
+          transform: translateY(-3px);
+        }
+        .icon { display: block; font-size: 32px; margin-bottom: 14px; }
+        .hint { margin-top: 25px; font-size: 12px; color: #737b8c; }
+      </style>
+
+      <div class="page">
+        <h2>Choose a page</h2>
+        <p>Select which page you want to open.</p>
+
+        <div class="options">
+          <a href="https://github.com/theofficalnothing-arch/securly/blob/main/duckmath.svg">
+            <span class="icon">🦆</span>
+            DuckMath
+          </a>
+
+          <a href="https://github.com/theofficalnothing-arch/securly/blob/main/securly.svg">
+            <span class="icon">🔒</span>
+            Securly hack
+          </a>
+        </div>
+
+        <div class="hint">Select an option to continue</div>
+      </div>
+    </div>
+  </foreignObject>
+</svg>

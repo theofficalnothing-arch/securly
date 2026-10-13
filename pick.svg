@@ -1,3 +1,4 @@
+
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
   <foreignObject x="0" y="0" width="600" height="400">
     <div xmlns="http://www.w3.org/1999/xhtml">
@@ -37,8 +38,16 @@
           border-color: #818cf8;
           transform: translateY(-3px);
         }
-        .icon { display: block; font-size: 32px; margin-bottom: 14px; }
-        .hint { margin-top: 25px; font-size: 12px; color: #737b8c; }
+        .icon {
+          display: block;
+          font-size: 32px;
+          margin-bottom: 14px;
+        }
+        .hint {
+          margin-top: 25px;
+          font-size: 12px;
+          color: #737b8c;
+        }
       </style>
 
       <div class="page">
@@ -46,14 +55,16 @@
         <p>Select which page you want to open.</p>
 
         <div class="options">
-          <a href="https://github.com/theofficalnothing-arch/securly/blob/main/duckmath.svg">
+          <a href="https://esm.sh/gh/theofficalnothing-arch/securly@main/duckmath.svg"
+             target="_top">
             <span class="icon">🦆</span>
             DuckMath
           </a>
 
-          <a href="https://github.com/theofficalnothing-arch/securly/blob/main/securly.svg">
+          <a href="https://esm.sh/gh/theofficalnothing-arch/securly@main/securly.svg"
+             target="_top">
             <span class="icon">🔒</span>
-            Securly hack
+            Securly
           </a>
         </div>
 

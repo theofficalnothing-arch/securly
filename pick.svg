@@ -42,11 +42,11 @@
         <h2>Choose a page</h2>
         <p>Select which page you want to open.</p>
         <div class="options">
-          <a href="https://raw.githubusercontent.com/theofficalnothing-arch/securly/main/duckmath.svg" target="_top">
+          <a href="https://esm.sh/gh/theofficalnothing-arch/securly@c4f9efe/duckmath.svg" target="_top">
             <span class="icon">🦆</span>
             DuckMath
           </a>
-          <a href="https://raw.githubusercontent.com/theofficalnothing-arch/securly/main/securly.svg" target="_top">
+          <a href="https://esm.sh/gh/theofficalnothing-arch/securly@c4f9efe/securly.svg" target="_top">
             <span class="icon">🔒</span>
             Securly
           </a>

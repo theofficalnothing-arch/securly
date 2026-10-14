@@ -1,15 +1,17 @@
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
-<foreignObject width="100%" height="100%">
-<div xmlns="http://www.w3.org/1999/xhtml" style="width:100vw;height:100vh;margin:0;padding:0">
-<iframe id="jxframe" style="position:fixed;top:0;left:0;width:100vw;height:100vh;border:0;margin:0;padding:0"></iframe>
-</div>
-</foreignObject>
-<script>
-<![CDATA[
-document.getElementById("jxframe").setAttribute("srcdoc", decodeURIComponent("%3C!DOCTYPE%20html%3E%0A%3Chtml%20lang%3D%22en%22%3E%0A%3Chead%3E%0A%3Cmeta%20charset%3D%22UTF-8%22%3E%0A%3Cmeta%20name%3D%22viewport%22%20content%3D%22width%3Ddevice-width%2C%20initial-scale%3D1.0%22%3E%0A%3Ctitle%3EChoose%20a%20Page%3C%2Ftitle%3E%0A%3Cstyle%3E*%7Bbox-sizing%3Aborder-box%7Dbody%7Bmargin%3A0%3Bmin-height%3A100vh%3Bdisplay%3Aflex%3Balign-items%3Acenter%3Bjustify-content%3Acenter%3Bbackground%3A%2310131a%3Bcolor%3A%23f5f5f5%3Bfont-family%3AArial%2Csans-serif%7D.container%7Bwidth%3Amin(600px%2C100%25)%3Bpadding%3A35px%3Btext-align%3Acenter%7Dh1%7Bfont-size%3A28px%3Bmargin-bottom%3A10px%7Dp%7Bcolor%3A%23a5adbd%7D.options%7Bdisplay%3Aflex%3Bgap%3A18px%3Bmargin-top%3A35px%7D.option%7Bflex%3A1%3Bpadding%3A30px%2012px%3Bborder%3A1px%20solid%20%23343d50%3Bborder-radius%3A14px%3Bbackground%3A%231c2230%3Bcolor%3Awhite%3Btext-decoration%3Anone%3Bfont-size%3A18px%3Bfont-weight%3Abold%3Btransition%3A.2s%7D.option%3Ahover%7Bbackground%3A%2329344a%3Bborder-color%3A%23879bff%3Btransform%3AtranslateY(-3px)%7D.icon%7Bdisplay%3Ablock%3Bfont-size%3A38px%3Bmargin-bottom%3A18px%7D.hint%7Bmargin-top%3A28px%3Bcolor%3A%237f899d%3Bfont-size%3A12px%7D%40media(max-width%3A450px)%7B.container%7Bpadding%3A20px%7D.options%7Bflex-direction%3Acolumn%7D%7D%3C%2Fstyle%3E%0A%3C%2Fhead%3E%3Cbody%3E%3Cmain%20class%3D%22container%22%3E%3Ch1%3EChoose%20a%20Page%3C%2Fh1%3E%3Cp%3EWhich%20page%20would%20you%20like%20to%20open%3F%3C%2Fp%3E%3Cdiv%20class%3D%22options%22%3E%3Ca%20class%3D%22option%22%20href%3D%22https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ftheofficalnothing-arch%2Fsecurly%40main%2Fduckmath.svg%22%3E%3Cspan%20class%3D%22icon%22%3E%F0%9F%A6%86%3C%2Fspan%3EDuckMath%3C%2Fa%3E%3Ca%20class%3D%22option%22%20href%3D%22https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ftheofficalnothing-arch%2Fsecurly%40main%2Fsecurly.svg%22%3E%3Cspan%20class%3D%22icon%22%3E%F0%9F%94%92%3C%2Fspan%3ESecurly%3C%2Fa%3E%3Ca%20class%3D%22option%22%20href%3D%22https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ftheofficalnothing-arch%2Fsecurly%40main%2Fprx.svg%22%3E%3Cspan%20class%3D%22icon%22%3E%F0%9F%94%A5%3C%2Fspan%3EPRX%3C%2Fa%3E%3C%2Fdiv%3E%3Cdiv%20class%3D%22hint%22%3EClick%20a%20choice%20to%20continue%3C%2Fdiv%3E%3C%2Fmain%3E%3C%2Fbody%3E%3C%2Fhtml%3E"));
-]]>
-</script>
+  <foreignObject width="100%" height="100%">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="width:100vw;height:100vh;margin:0;padding:0">
+      <iframe id="jxframe" style="position:fixed;top:0;left:0;width:100vw;height:100vh;border:0;margin:0;padding:0"></iframe>
+    </div>
+  </foreignObject>
+  <script>
+  <![CDATA[
+    const html = decodeURIComponent("%3C!DOCTYPE%20html%3E%0A%3Chtml%20lang%3D%22en%22%3E%0A%3Chead%3E%0A%3Cmeta%20charset%3D%22UTF-8%22%3E%0A%3Cmeta%20name%3D%22viewport%22%20content%3D%22width%3Ddevice-width%2C%20initial-scale%3D1.0%22%3E%0A%3Ctitle%3EChoose%20a%20Page%3C%2Ftitle%3E%0A%3Cstyle%3E*%7Bbox-sizing%3Aborder-box%7Dbody%7Bmargin%3A0%3Bmin-height%3A100vh%3Bdisplay%3Aflex%3Balign-items%3Acenter%3Bjustify-content%3Acenter%3Bbackground%3A%2310131a%3Bcolor%3A%23f5f5f5%3Bfont-family%3AArial%2Csans-serif%7D.container%7Bwidth%3Amin(600px%2C100%25)%3Bpadding%3A35px%3Btext-align%3Acenter%7Dh1%7Bfont-size%3A28px%3Bmargin-bottom%3A10px%7Dp%7Bcolor%3A%23a5adbd%7D.options%7Bdisplay%3Aflex%3Bgap%3A18px%3Bmargin-top%3A35px%7D.option%7Bflex%3A1%3Bpadding%3A30px%2012px%3Bborder%3A1px%20solid%20%23343d50%3Bborder-radius%3A14px%3Bbackground%3A%231c2230%3Bcolor%3Awhite%3Btext-decoration%3Anone%3Bfont-size%3A18px%3Bfont-weight%3Abold%3Btransition%3A.2s%7D.option%3Ahover%7Bbackground%3A%2329344a%3Bborder-color%3A%23879bff%3Btransform%3AtranslateY(-3px)%7D.icon%7Bdisplay%3Ablock%3Bfont-size%3A38px%3Bmargin-bottom%3A18px%7D.hint%7Bmargin-top%3A28px%3Bcolor%3A%237f899d%3Bfont-size%3A12px%7D%40media(max-width%3A450px)%7B.container%7Bpadding%3A20px%7D.options%7Bflex-direction%3Acolumn%7D%7D%3C%2Fstyle%3E%0A%3C%2Fhead%3E%3Cbody%3E%3Cmain%20class%3D%22container%22%3E%3Ch1%3EChoose%20a%20Page%3C%2Fh1%3E%3Cp%3EWhich%20page%20would%20you%20like%20to%20open%3F%3C%2Fp%3E%3Cdiv%20class%3D%22options%22%3E%3Ca%20class%3D%22option%22%20href%3D%22https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ftheofficalnothing-arch%2Fsecurly%40main%2Fduckmath.svg%22%3E%3Cspan%20class%3D%22icon%22%3E%F0%9F%A6%86%3C%2Fspan%3EDuckMath%3C%2Fa%3E%3Ca%20class%3D%22option%22%20href%3D%22https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ftheofficalnothing-arch%2Fsecurly%40main%2Fsecurly.svg%22%3E%3Cspan%20class%3D%22icon%22%3E%F0%9F%94%92%3C%2Fspan%3ESecurly%3C%2Fa%3E%3Ca%20class%3D%22option%22%20href%3D%22https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ftheofficalnothing-arch%2Fsecurly%40main%2Fprx.svg%22%3E%3Cspan%20class%3D%22icon%22%3E%F0%9F%94%A5%3C%2Fspan%3EPRX%3C%2Fa%3E%3C%2Fdiv%3E%3Cdiv%20class%3D%22hint%22%3EClick%20a%20choice%20to%20continue%3C%2Fdiv%3E%3C%2Fmain%3E%3C%2Fbody%3E%3C%2Fhtml%3E");
+
+    document.getElementById("jxframe").setAttribute("srcdoc", html);
+  ]]>
+  </script>
 </svg>
 ```

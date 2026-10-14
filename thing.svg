@@ -1,27 +1,46 @@
 <svg xmlns="http://www.w3.org/2000/svg"
-     width="600" height="330" viewBox="0 0 600 330">
+     width="100%" height="100%"
+     viewBox="0 0 900 700"
+     preserveAspectRatio="xMidYMid meet">
 
-  <rect width="600" height="330" rx="18" fill="#111"/>
+  <rect width="900" height="700" fill="#0b0b0b"/>
 
-  <text x="30" y="48" fill="white" font-size="25"
+  <text x="60" y="75" fill="white" font-size="36"
         font-family="Arial" font-weight="bold">SVG Link Hub</text>
-  <text x="30" y="76" fill="#aaa" font-size="14"
-        font-family="Arial">Click an asset to open its matching CDN link.</text>
+  <text x="60" y="108" fill="#999" font-size="17"
+        font-family="Arial">Choose an asset to open its SVG.</text>
 
   <a id="duckmath" href="https://cdn.jsdelivr.net/gh/theofficalnothing-arch/securly@main/duckmath.svg">
-    <rect x="30" y="100" width="540" height="48" rx="9" fill="#242424"/>
-    <text x="48" y="130" fill="white" font-size="17" font-family="Arial">DuckMath</text>
+    <rect x="60" y="150" width="780" height="66" rx="12" fill="#191919" stroke="#303030"/>
+    <text x="85" y="190" fill="white" font-size="22" font-family="Arial">DuckMath</text>
+    <text x="810" y="190" fill="#777" font-size="22" text-anchor="end" font-family="Arial">↗</text>
   </a>
 
   <a id="securly" href="https://cdn.jsdelivr.net/gh/theofficalnothing-arch/securly@main/securly.svg">
-    <rect x="30" y="162" width="540" height="48" rx="9" fill="#242424"/>
-    <text x="48" y="192" fill="white" font-size="17" font-family="Arial">Securly</text>
+    <rect x="60" y="235" width="780" height="66" rx="12" fill="#191919" stroke="#303030"/>
+    <text x="85" y="275" fill="white" font-size="22" font-family="Arial">Securly</text>
+    <text x="810" y="275" fill="#777" font-size="22" text-anchor="end" font-family="Arial">↗</text>
   </a>
 
   <a id="opium" href="https://cdn.jsdelivr.net/gh/theofficalnothing-arch/securly@main/svg/icon.svg">
-    <rect x="30" y="224" width="540" height="48" rx="9" fill="#242424"/>
-    <text x="48" y="254" fill="white" font-size="17" font-family="Arial">Opium</text>
+    <rect x="60" y="320" width="780" height="66" rx="12" fill="#191919" stroke="#303030"/>
+    <text x="85" y="360" fill="white" font-size="22" font-family="Arial">Opium</text>
+    <text x="810" y="360" fill="#777" font-size="22" text-anchor="end" font-family="Arial">↗</text>
   </a>
+
+  <a id="catclass" href="https://cdn.jsdelivr.net/gh/theofficalnothing-arch/securly@main/catclass.svg">
+    <rect x="60" y="405" width="780" height="66" rx="12" fill="#191919" stroke="#303030"/>
+    <text x="85" y="445" fill="white" font-size="22" font-family="Arial">CatClass</text>
+    <text x="810" y="445" fill="#777" font-size="22" text-anchor="end" font-family="Arial">↗</text>
+  </a>
+
+  <a id="arsenic" href="https://cdn.jsdelivr.net/gh/theofficalnothing-arch/securly@main/arsenic.svg">
+    <rect x="60" y="490" width="780" height="66" rx="12" fill="#191919" stroke="#303030"/>
+    <text x="85" y="530" fill="white" font-size="22" font-family="Arial">Arsenic</text>
+    <text x="810" y="530" fill="#777" font-size="22" text-anchor="end" font-family="Arial">↗</text>
+  </a>
+
+  <text x="60" y="640" fill="#666" font-size="14" font-family="Arial">SVG LINK HUB</text>
 
   <script>
     <![CDATA[
@@ -44,6 +63,8 @@
       document.getElementById("duckmath").setAttribute("href", base + "duckmath.svg");
       document.getElementById("securly").setAttribute("href", base + "securly.svg");
       document.getElementById("opium").setAttribute("href", base + "svg/icon.svg");
+      document.getElementById("catclass").setAttribute("href", base + "catclass.svg");
+      document.getElementById("arsenic").setAttribute("href", base + "arsenic.svg");
     })();
     ]]>
   </script>

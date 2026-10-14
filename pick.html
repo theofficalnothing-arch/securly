@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Choose a Page</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #10131a;
+      color: #f5f5f5;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      width: min(600px, 100%);
+      padding: 35px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #a5adbd;
+    }
+
+    .options {
+      display: flex;
+      gap: 18px;
+      margin-top: 35px;
+    }
+
+    .option {
+      flex: 1;
+      padding: 30px 12px;
+      border: 1px solid #343d50;
+      border-radius: 14px;
+      background: #1c2230;
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      transition: 0.2s;
+    }
+
+    .option:hover {
+      background: #29344a;
+      border-color: #879bff;
+      transform: translateY(-3px);
+    }
+
+    .icon {
+      display: block;
+      font-size: 38px;
+      margin-bottom: 18px;
+    }
+
+    .hint {
+      margin-top: 28px;
+      color: #7f899d;
+      font-size: 12px;
+    }
+
+    @media (max-width: 450px) {
+      .container {
+        padding: 20px;
+      }
+
+      .options {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+    <h1>Choose a Page</h1>
+    <p>Which page would you like to open?</p>
+
+    <div class="options">
+      <a
+        class="option"
+        href="https://esm.sh/gh/theofficalnothing-arch/securly@main/duckmath.svg"
+      >
+        <span class="icon">🦆</span>
+        DuckMath
+      </a>
+
+      <a
+        class="option"
+        href="https://esm.sh/gh/theofficalnothing-arch/securly@main/securly.svg"
+      >
+        <span class="icon">🔒</span>
+        Securly
+      </a>
+    </div>
+
+    <div class="hint">Click a choice to continue</div>
+  </main>
+</body>
+</html>

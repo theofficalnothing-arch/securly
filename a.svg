@@ -4,124 +4,25 @@
      viewBox="0 0 1000 700">
   <foreignObject x="0" y="0" width="100%" height="100%">
     <div xmlns="http://www.w3.org/1999/xhtml"
-         style="width:100vw;height:100vh;margin:0;padding:0;overflow:auto">
-      <iframe id="jxframe"
-              title="Choose a Page"
-              style="position:fixed;top:0;left:0;width:100vw;height:100vh;border:0;margin:0;padding:0">
-      </iframe>
+         style="margin:0;padding:0;width:100vw;height:100vh;overflow:auto;">
+      <div style="position:fixed;left:0;top:0;width:280px;height:200px;max-width:100vw;max-height:100vh;overflow:auto;background:#10131a;border:8px solid #ff4d00;border-radius:0 0 14px 0;padding:12px;color:white;font-family:Arial,sans-serif;">
+        <h2 style="font-size:18px;margin:0 0 12px;">Choose a Page</h2>
+
+        <a href="https://cdn.jsdelivr.net/gh/theofficalnothing-arch/securly@main/duckmath.svg"
+           style="display:block;color:white;padding:8px;margin:5px 0;background:#1c2230;border-radius:6px;text-decoration:none;">
+          🦆 DuckMath
+        </a>
+
+        <a href="https://cdn.jsdelivr.net/gh/theofficalnothing-arch/securly@main/securly.svg"
+           style="display:block;color:white;padding:8px;margin:5px 0;background:#1c2230;border-radius:6px;text-decoration:none;">
+          🔒 Securly
+        </a>
+
+        <a href="https://cdn.jsdelivr.net/gh/theofficalnothing-arch/securly@main/svg/opium.svg"
+           style="display:block;color:white;padding:8px;margin:5px 0;background:#1c2230;border-radius:6px;text-decoration:none;">
+          🔥 Opium
+        </a>
+      </div>
     </div>
   </foreignObject>
-
-  <script type="application/ecmascript"><![CDATA[
-    const html = `
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Choose a Page</title>
-<style>
-* {
-  box-sizing: border-box;
-}
-body {
-  margin: 0;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #10131a;
-  color: #f5f5f5;
-  font-family: Arial, sans-serif;
-}
-.container {
-  width: min(700px, 100%);
-  padding: 35px;
-  text-align: center;
-}
-h1 {
-  font-size: 28px;
-  margin-bottom: 10px;
-}
-p {
-  color: #a5adbd;
-}
-.options {
-  display: flex;
-  gap: 18px;
-  margin-top: 35px;
-  flex-wrap: wrap;
-}
-.option {
-  flex: 1;
-  min-width: 120px;
-  padding: 30px 12px;
-  border: 1px solid #343d50;
-  border-radius: 14px;
-  background: #1c2230;
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: bold;
-  transition: .2s;
-}
-.option:hover {
-  background: #29344a;
-  border-color: #879bff;
-  transform: translateY(-3px);
-}
-.icon {
-  display: block;
-  font-size: 38px;
-  margin-bottom: 18px;
-}
-.hint {
-  margin-top: 28px;
-  color: #7f899d;
-  font-size: 12px;
-}
-@media (max-width: 450px) {
-  .container {
-    padding: 20px;
-  }
-  .options {
-    flex-direction: column;
-  }
-}
-</style>
-</head>
-<body>
-<main class="container">
-  <h1>Choose a Page</h1>
-  <p>Which page would you like to open?</p>
-
-  <div class="options">
-    <a class="option"
-       href="https://cdn.jsdelivr.net/gh/theofficalnothing-arch/securly@main/duckmath.svg">
-      <span class="icon">🦆</span>DuckMath
-    </a>
-
-    <a class="option"
-       href="https://cdn.jsdelivr.net/gh/theofficalnothing-arch/securly@main/securly.svg">
-      <span class="icon">🔒</span>Securly
-    </a>
-
-    <a class="option"
-       href="https://cdn.jsdelivr.net/gh/theofficalnothing-arch/securly@main/svg/opium.svg">
-      <span class="icon">🔥</span>Opium
-    </a>
-
-    <a class="option"
-       href="https://cdn.jsdelivr.net/gh/theofficalnothing-arch/securly@main/a.svg">
-      <span class="icon">✨</span>A
-    </a>
-  </div>
-
-  <div class="hint">Click a choice to continue</div>
-</main>
-</body>
-</html>`;
-
-    document.getElementById("jxframe").srcdoc = html;
-  ]]></script>
 </svg>

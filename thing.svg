@@ -1,0 +1,119 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xhtml="http://www.w3.org/1999/xhtml" width="720" height="570" viewBox="0 0 720 570">
+  <rect width="720" height="570" rx="18" fill="#101010"/>
+  <rect x="1" y="1" width="718" height="568" rx="17" fill="none" stroke="#333"/>
+
+  <text x="35" y="55" fill="#fff" font-family="Arial" font-size="27" font-weight="bold">SVG CDN Converter</text>
+  <text x="35" y="82" fill="#aaa" font-family="Arial" font-size="14">Choose an asset and CDN to generate its link.</text>
+
+  <foreignObject x="35" y="105" width="650" height="430">
+    <xhtml:div xmlns="http://www.w3.org/1999/xhtml" style="font-family:Arial,sans-serif;color:#eee">
+      <style>
+        label { display:block; margin:12px 0 7px; font-size:14px; }
+        select, input, button {
+          box-sizing:border-box;
+          width:100%;
+          padding:11px;
+          border:1px solid #444;
+          border-radius:7px;
+          background:#202020;
+          color:#fff;
+          font-size:14px;
+        }
+        button { cursor:pointer; background:#eee; color:#111; font-weight:bold; }
+        .output {
+          margin-top:8px;
+          padding:12px;
+          min-height:42px;
+          background:#080808;
+          border:1px solid #444;
+          border-radius:7px;
+          overflow-wrap:anywhere;
+          word-break:break-word;
+          font-size:13px;
+          line-height:1.5;
+        }
+        .buttons { display:flex; gap:10px; margin-top:10px; }
+        .buttons button { flex:1; }
+        #status { color:#aaa; font-size:12px; }
+      </style>
+
+      <label for="asset">SVG file</label>
+      <select id="asset">
+        <option value="duckmath.svg">DuckMath — duckmath.svg</option>
+        <option value="securly.svg">Securly — securly.svg</option>
+        <option value="svg/icon.svg">Opium — svg/icon.svg</option>
+      </select>
+
+      <label for="cdn">CDN provider</label>
+      <select id="cdn">
+        <option value="jsdelivr">jsDelivr</option>
+        <option value="esm">esm.sh</option>
+        <option value="raw">GitHub Raw</option>
+        <option value="unpkg">UNPKG</option>
+      </select>
+
+      <label for="version">GitHub branch / version</label>
+      <input id="version" value="main" />
+
+      <label>Generated URL</label>
+      <div class="output" id="output">Choose a file to generate its link.</div>
+
+      <div class="buttons">
+        <button id="copy" type="button">Copy link</button>
+        <button id="open" type="button">Open link</button>
+      </div>
+      <p id="status">Links are generated from your selected file and CDN.</p>
+
+      <script>
+        <![CDATA[
+        const asset = document.getElementById("asset");
+        const cdn = document.getElementById("cdn");
+        const version = document.getElementById("version");
+        const output = document.getElementById("output");
+        const status = document.getElementById("status");
+
+        function generate() {
+          const file = asset.value;
+          const ref = version.value.trim() || "main";
+          const repo = "theofficalnothing-arch/securly";
+          let url = "";
+
+          if (cdn.value === "jsdelivr") {
+            url = "https://cdn.jsdelivr.net/gh/" + repo + "@" + ref + "/" + file;
+          } else if (cdn.value === "esm") {
+            url = "https://esm.sh/gh/" + repo + "@" + ref + "/" + file;
+          } else if (cdn.value === "raw") {
+            url = "https://raw.githubusercontent.com/" + repo + "/" + ref + "/" + file;
+          } else if (cdn.value === "unpkg") {
+            url = "https://unpkg.com/securly-assets@1.0.1/" + file;
+          }
+
+          output.textContent = url;
+          status.textContent = "Link generated.";
+          return url;
+        }
+
+        asset.addEventListener("change", generate);
+        cdn.addEventListener("change", generate);
+        version.addEventListener("input", generate);
+
+        document.getElementById("copy").addEventListener("click", async () => {
+          try {
+            await navigator.clipboard.writeText(generate());
+            status.textContent = "Copied!";
+          } catch (e) {
+            status.textContent = "Copy unavailable. Select the URL and copy it manually.";
+          }
+        });
+
+        document.getElementById("open").addEventListener("click", () => {
+          window.open(generate(), "_blank", "noopener,noreferrer");
+        });
+
+        generate();
+        ]]>
+      </script>
+    </xhtml:div>
+  </foreignObject>
+</svg>

@@ -1,4 +1,3 @@
-alert("Port by https://yukios.pages.dev")
 var h;
 h || (h = typeof Module !== "undefined" ? Module : {});
 h.lk || (h.lk = 0);

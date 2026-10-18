@@ -1,52 +1,9 @@
-
-<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1000 1070" preserveAspectRatio="xMidYMin meet">
-  <rect width="1000" height="1070" fill="#000"/>
-
-  <text x="500" y="55" fill="#fff" font-size="42" font-family="Arial" font-weight="bold" text-anchor="middle">SVG Link Hub</text>
-  <text x="500" y="90" fill="#aaa" font-size="19" font-family="Arial" text-anchor="middle">Choose an asset</text>
-
-  <a href="catclass.svg" target="_blank">
-    <rect x="150" y="130" width="700" height="65" rx="14" fill="#222"/>
-    <text x="500" y="170" fill="#fff" font-size="25" font-family="Arial" text-anchor="middle">CatClass</text>
-  </a>
-
-  <a href="catfish/index.svg" target="_blank">
-    <rect x="150" y="220" width="700" height="65" rx="14" fill="#222"/>
-    <text x="500" y="260" fill="#fff" font-size="25" font-family="Arial" text-anchor="middle">Catfish</text>
-  </a>
-
-  <a href="daydreemx/index.svg" target="_blank">
-    <rect x="150" y="310" width="700" height="65" rx="14" fill="#222"/>
-    <text x="500" y="350" fill="#fff" font-size="25" font-family="Arial" text-anchor="middle">Daydreemx</text>
-  </a>
-
-  <a href="duckmath.svg" target="_blank">
-    <rect x="150" y="400" width="700" height="65" rx="14" fill="#222"/>
-    <text x="500" y="440" fill="#fff" font-size="25" font-family="Arial" text-anchor="middle">DuckMath</text>
-  </a>
-
-  <a href="geometrydash/index.svg" target="_blank">
-    <rect x="150" y="490" width="700" height="65" rx="14" fill="#222"/>
-    <text x="500" y="530" fill="#fff" font-size="25" font-family="Arial" text-anchor="middle">GeometryDash</text>
-  </a>
-
-  <a href="niche/index.svg" target="_blank">
-    <rect x="150" y="580" width="700" height="65" rx="14" fill="#222"/>
-    <text x="500" y="620" fill="#fff" font-size="25" font-family="Arial" text-anchor="middle">Niche</text>
-  </a>
-
-  <a href="securly.svg" target="_blank">
-    <rect x="150" y="670" width="700" height="65" rx="14" fill="#222"/>
-    <text x="500" y="710" fill="#fff" font-size="25" font-family="Arial" text-anchor="middle">Securly</text>
-  </a>
-
-  <a href="svg/icon.svg" target="_blank">
-    <rect x="150" y="760" width="700" height="65" rx="14" fill="#222"/>
-    <text x="500" y="800" fill="#fff" font-size="25" font-family="Arial" text-anchor="middle">Opium</text>
-  </a>
-
-  <a href="space/index.svg" target="_blank">
-    <rect x="150" y="850" width="700" height="65" rx="14" fill="#222"/>
-    <text x="500" y="890" fill="#fff" font-size="25" font-family="Arial" text-anchor="middle">Space</text>
-  </a>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+<foreignObject width="100%" height="100%"><div xmlns="http://www.w3.org/1999/xhtml" style="width:100vw;height:100vh;margin:0;padding:0"><iframe id="jxframe" style="position:fixed;top:0;left:0;width:100vw;height:100vh;border:0;margin:0;padding:0"></iframe></div></foreignObject>
+<script>
+<![CDATA[
+document.getElementById("jxframe").setAttribute("srcdoc", decodeURIComponent("%20%3C!DOCTYPE%20html%3E%0A%3Chtml%20lang%3D%22en%22%3E%0A%3Chead%3E%0A%20%20%3Cmeta%20charset%3D%22UTF-8%22%3E%0A%20%20%3Cmeta%20name%3D%22viewport%22%20content%3D%22width%3Ddevice-width%2C%20initial-scale%3D1.0%22%3E%0A%20%20%3Ctitle%3ESVG%20Link%20Hub%3C%2Ftitle%3E%0A%20%20%3Cstyle%3E%0A%20%20%20%20*%20%7B%0A%20%20%20%20%20%20box-sizing%3A%20border-box%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20html%2C%20body%20%7B%0A%20%20%20%20%20%20margin%3A%200%3B%0A%20%20%20%20%20%20min-height%3A%20100%25%3B%0A%20%20%20%20%20%20background%3A%20%23000%3B%0A%20%20%20%20%20%20color%3A%20%23fff%3B%0A%20%20%20%20%20%20font-family%3A%20Arial%2C%20sans-serif%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20body%20%7B%0A%20%20%20%20%20%20min-height%3A%20100vh%3B%0A%20%20%20%20%20%20display%3A%20flex%3B%0A%20%20%20%20%20%20justify-content%3A%20center%3B%0A%20%20%20%20%20%20align-items%3A%20flex-start%3B%0A%20%20%20%20%20%20padding%3A%2030px%2020px%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20main%20%7B%0A%20%20%20%20%20%20width%3A%20100%25%3B%0A%20%20%20%20%20%20max-width%3A%20700px%3B%0A%20%20%20%20%20%20text-align%3A%20center%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20h1%20%7B%0A%20%20%20%20%20%20margin%3A%200%200%2010px%3B%0A%20%20%20%20%20%20font-size%3A%20clamp(30px%2C%205vw%2C%2042px)%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20.subtitle%20%7B%0A%20%20%20%20%20%20margin%3A%200%200%2035px%3B%0A%20%20%20%20%20%20color%3A%20%23aaa%3B%0A%20%20%20%20%20%20font-size%3A%2019px%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20.links%20%7B%0A%20%20%20%20%20%20display%3A%20flex%3B%0A%20%20%20%20%20%20flex-direction%3A%20column%3B%0A%20%20%20%20%20%20gap%3A%2018px%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20.link%20%7B%0A%20%20%20%20%20%20display%3A%20flex%3B%0A%20%20%20%20%20%20min-height%3A%2065px%3B%0A%20%20%20%20%20%20justify-content%3A%20center%3B%0A%20%20%20%20%20%20align-items%3A%20center%3B%0A%20%20%20%20%20%20padding%3A%2015px%3B%0A%20%20%20%20%20%20border%3A%201px%20solid%20%23333%3B%0A%20%20%20%20%20%20border-radius%3A%2014px%3B%0A%20%20%20%20%20%20background%3A%20%23222%3B%0A%20%20%20%20%20%20color%3A%20%23fff%3B%0A%20%20%20%20%20%20font-size%3A%2025px%3B%0A%20%20%20%20%20%20text-decoration%3A%20none%3B%0A%20%20%20%20%20%20transition%3A%20background%200.2s%20ease%2C%20border-color%200.2s%20ease%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20transform%200.2s%20ease%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20.link%3Ahover%2C%0A%20%20%20%20.link%3Afocus-visible%20%7B%0A%20%20%20%20%20%20background%3A%20%23303030%3B%0A%20%20%20%20%20%20border-color%3A%20%23888%3B%0A%20%20%20%20%20%20transform%3A%20translateY(-2px)%3B%0A%20%20%20%20%20%20outline%3A%20none%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20.link%3Aactive%20%7B%0A%20%20%20%20%20%20transform%3A%20scale(0.99)%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20%40media%20(prefers-reduced-motion%3A%20reduce)%20%7B%0A%20%20%20%20%20%20.link%20%7B%0A%20%20%20%20%20%20%20%20transition%3A%20none%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%3C%2Fstyle%3E%0A%3C%2Fhead%3E%0A%3Cbody%3E%0A%20%20%3Cmain%3E%0A%20%20%20%20%3Ch1%3ESVG%20Link%20Hub%3C%2Fh1%3E%0A%20%20%20%20%3Cp%20class%3D%22subtitle%22%3EChoose%20an%20asset%3C%2Fp%3E%0A%0A%20%20%20%20%3Cnav%20class%3D%22links%22%20aria-label%3D%22Assets%22%3E%0A%20%20%20%20%20%20%3Ca%0A%20%20%20%20%20%20%20%20class%3D%22link%22%0A%20%20%20%20%20%20%20%20href%3D%22https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ftheofficalnothing-arch%2Fsecurly%40main%2Fdaydreemx%2Findex.svg%22%0A%20%20%20%20%20%20%20%20target%3D%22_blank%22%0A%20%20%20%20%20%20%20%20rel%3D%22noopener%20noreferrer%22%0A%20%20%20%20%20%20%3EDaydreemx%3C%2Fa%3E%0A%0A%20%20%20%20%20%20%3Ca%0A%20%20%20%20%20%20%20%20class%3D%22link%22%0A%20%20%20%20%20%20%20%20href%3D%22https%3A%2F%2Fraw.githubusercontent.com%2Ftheofficalnothing-arch%2Fsecurly%2Fmain%2Fdaydreemx%2Findex.svg%22%0A%20%20%20%20%20%20%20%20target%3D%22_blank%22%0A%20%20%20%20%20%20%20%20rel%3D%22noopener%20noreferrer%22%0A%20%20%20%20%20%20%3EDaydreemx%20(Raw%20GitHub)%3C%2Fa%3E%0A%0A%20%20%20%20%20%20%3Ca%0A%20%20%20%20%20%20%20%20class%3D%22link%22%0A%20%20%20%20%20%20%20%20href%3D%22https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ftheofficalnothing-arch%2Fsecurly%40main%2Fspace%2Findex.svg%22%0A%20%20%20%20%20%20%20%20target%3D%22_blank%22%0A%20%20%20%20%20%20%20%20rel%3D%22noopener%20noreferrer%22%0A%20%20%20%20%20%20%3ESpace%3C%2Fa%3E%0A%0A%20%20%20%20%20%20%3Ca%0A%20%20%20%20%20%20%20%20class%3D%22link%22%0A%20%20%20%20%20%20%20%20href%3D%22https%3A%2F%2Fraw.githubusercontent.com%2Ftheofficalnothing-arch%2Fsecurly%2Fmain%2Fspace%2Findex.svg%22%0A%20%20%20%20%20%20%20%20target%3D%22_blank%22%0A%20%20%20%20%20%20%20%20rel%3D%22noopener%20noreferrer%22%0A%20%20%20%20%20%20%3ESpace%20(Raw%20GitHub)%3C%2Fa%3E%0A%20%20%20%20%3C%2Fnav%3E%0A%20%20%3C%2Fmain%3E%0A%3C%2Fbody%3E%0A%3C%2Fhtml%3E"));
+]]>
+</script>
 </svg>

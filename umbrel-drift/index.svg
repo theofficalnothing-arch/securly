@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" style="position: fixed; top: 0; left: 0;">
+  <style>:root{--lightningcss-light: ;--lightningcss-dark:initial;color-scheme:dark}*{box-sizing:border-box}body{color:#cdd6f4;background:radial-gradient(120% 120% at 50% 0,#1e1e2e 0%,#11111b 55%,#0b0b12 100%);place-items:center;min-height:100vh;margin:0;padding:1rem;font:16px/1.5 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;display:grid}main{text-align:center;background:#181825;border:1px solid #313244;border-radius:16px;width:min(430px,100%);padding:2rem 1.75rem 1.75rem;box-shadow:0 18px 50px #00000080}h1{color:#fff;text-wrap:balance;margin:0 0 .25rem;font-size:1.25rem;line-height:1.35}h1 .accent{color:#b4befe}.sub{letter-spacing:.14em;text-transform:uppercase;color:#a6adc8;margin:0 0 1.25rem;font-size:.8rem}#status{color:#a6adc8;overflow-wrap:anywhere;min-height:1.5em;margin:0 0 1rem;font-size:.9rem}#progress{background:#313244;border:0;border-radius:9999px;width:100%;height:8px;margin:0 0 1.25rem;overflow:hidden}#progress::-webkit-progress-bar{background:#313244;border-radius:9999px}#progress::-webkit-progress-value{background:linear-gradient(90deg,#b4befe,#89b4fa);border-radius:9999px;box-shadow:0 0 12px #b4befe80}#progress::-moz-progress-bar{background:linear-gradient(90deg,#b4befe,#89b4fa);border-radius:9999px;box-shadow:0 0 12px #b4befe80}.actions{justify-content:center;gap:.5rem;display:flex}button{font:inherit;cursor:pointer;color:#cdd6f4;background:#1e1e2e;border:1px solid #45475a;border-radius:10px;padding:.5rem 1.1rem;transition:border-color .2s,color .2s,transform .2s}button:hover:not(:disabled){color:#b4befe;border-color:#b4befe}button:disabled{opacity:.5;cursor:default}button:focus-visible{outline-offset:2px;outline:2px solid #b4befe}[hidden]{display:none!important}</style>
+  <foreignObject x="0" y="0" width="100%" height="100%">
+    <body xmlns="http://www.w3.org/1999/xhtml">
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width,initial-scale=1" />
+      <meta name="color-scheme" content="dark" />
+      <title>Night Network - Constellation - Orion</title>
+      <main><p class="sub">Night Network · Constellation</p><h1>Night Network - Constellation - <span class="accent">Orion</span></h1><p id="status" role="status" aria-live="polite">Loading…</p><progress id="progress" max="1" value="0"></progress><div class="actions"><button id="retry" hidden="">Retry</button><button id="reset" hidden="">Reset</button></div></main>
+    </body>
+  </foreignObject>
+  <script><![CDATA[
+(function() {
+  var ns = "http://www.w3.org/1999/xhtml";
+  var body = document.querySelector("body");
+  var head = document.createElementNS(ns, "head");
+  body.prepend(head);
+  Object.defineProperty(document, "head", { get: function() { return head; }, configurable: true });
+  Object.defineProperty(document, "body", { get: function() { return body; }, configurable: true });
+  document.createElement = function(tag, opts) {
+    var node = document.createElementNS(ns, tag, opts);
+    Object.defineProperty(node, "tagName", { get: function() { return node.localName.toUpperCase(); }, configurable: true });
+    return node;
+  };
+  // HTML vendors mount overlays on documentElement, which is SVG here.
+  var root = document.documentElement;
+  if (root && root.namespaceURI === "http://www.w3.org/2000/svg") {
+    var append = root.appendChild.bind(root);
+    var routed = new WeakSet();
+    var virtualTail = false;
+    root.appendChild = function(node) {
+      virtualTail = node.namespaceURI === ns;
+      if (!virtualTail) return append(node);
+      routed.add(node);
+      return body.appendChild(node);
+    };
+    var proto = root, last;
+    while (proto && !last) { last = Object.getOwnPropertyDescriptor(proto, "lastElementChild"); proto = Object.getPrototypeOf(proto); }
+    if (last && last.get) Object.defineProperty(root, "lastElementChild", { configurable: true, get: function() {
+      var tail = body.lastElementChild;
+      return virtualTail && tail && routed.has(tail) ? tail : last.get.call(root);
+    } });
+  }
+  // Parse writes as HTML (XML innerHTML rejects HTML entities/void tags).
+  document.write = function() {
+    var parsed = new DOMParser().parseFromString(Array.prototype.join.call(arguments, ""), "text/html");
+    function mount(source, target) {
+      Array.from(source.childNodes).forEach(function(node) {
+        var copy = document.importNode(node, true);
+        // Imported parser scripts are inert; recreate them in this realm.
+        var scripts = copy.nodeType === 1 ? (copy.localName === "script" ? [copy] : Array.from(copy.querySelectorAll("script"))) : [];
+        scripts.forEach(function(old) {
+          var active = document.createElement("script"); active.async = false;
+          Array.from(old.attributes).forEach(function(attr) { active.setAttribute(attr.name, attr.value); });
+          active.textContent = old.textContent;
+          if (old === copy) copy = active; else old.replaceWith(active);
+        });
+        target.appendChild(copy);
+      });
+    }
+    mount(parsed.head, head); mount(parsed.body, body);
+  };
+  document.writeln = function() { document.write(Array.prototype.join.call(arguments, "") + "\n"); };
+})();;
+
+(function() {
+  var ns = "http://www.w3.org/1999/xhtml";
+  var d = document;
+  var b = d.querySelector("body");
+
+  function loadModules() {
+    var mods = [{"src":"./bootstrap-index-Bljkfios.js","co":true}];
+    mods.forEach(function(m, i) {
+      var s = d.createElementNS(ns, "script");
+      s.setAttribute("type", "module");
+      s.setAttribute("src", m.src);
+      if (m.co) s.setAttribute("crossorigin", "");
+      if (i === mods.length - 1) {
+        s.onload = function() { d.dispatchEvent(new Event("DOMContentLoaded")); };
+      }
+      b.appendChild(s);
+    });
+  }
+
+  loadModules();
+})();
+  ]]></script>
+</svg>

@@ -1,66 +1,52 @@
-<svg xmlns="http://www.w3.org/2000/svg"
-     width="100%" height="100%"
-     viewBox="0 0 1000 800"
-     preserveAspectRatio="xMidYMid meet">
 
-  <rect width="1000" height="800" fill="#000"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1000 1070" preserveAspectRatio="xMidYMin meet">
+  <rect width="1000" height="1070" fill="#000"/>
 
-  <text x="500" y="90"
-        fill="#fff"
-        font-size="42"
-        font-family="Arial"
-        font-weight="bold"
-        text-anchor="middle">SVG Link Hub</text>
+  <text x="500" y="55" fill="#fff" font-size="42" font-family="Arial" font-weight="bold" text-anchor="middle">SVG Link Hub</text>
+  <text x="500" y="90" fill="#aaa" font-size="19" font-family="Arial" text-anchor="middle">Choose an asset</text>
 
-  <text x="500" y="130"
-        fill="#aaa"
-        font-size="19"
-        font-family="Arial"
-        text-anchor="middle">Choose an asset</text>
+  <a href="catclass.svg" target="_blank">
+    <rect x="150" y="130" width="700" height="65" rx="14" fill="#222"/>
+    <text x="500" y="170" fill="#fff" font-size="25" font-family="Arial" text-anchor="middle">CatClass</text>
+  </a>
+
+  <a href="catfish/index.svg" target="_blank">
+    <rect x="150" y="220" width="700" height="65" rx="14" fill="#222"/>
+    <text x="500" y="260" fill="#fff" font-size="25" font-family="Arial" text-anchor="middle">Catfish</text>
+  </a>
+
+  <a href="daydreemx/index.svg" target="_blank">
+    <rect x="150" y="310" width="700" height="65" rx="14" fill="#222"/>
+    <text x="500" y="350" fill="#fff" font-size="25" font-family="Arial" text-anchor="middle">Daydreemx</text>
+  </a>
 
   <a href="duckmath.svg" target="_blank">
-    <rect x="150" y="180" width="700" height="75"
-          rx="14" fill="#222"/>
-    <text x="500" y="227"
-          fill="#fff" font-size="25"
-          font-family="Arial"
-          text-anchor="middle">DuckMath</text>
+    <rect x="150" y="400" width="700" height="65" rx="14" fill="#222"/>
+    <text x="500" y="440" fill="#fff" font-size="25" font-family="Arial" text-anchor="middle">DuckMath</text>
+  </a>
+
+  <a href="geometrydash/index.svg" target="_blank">
+    <rect x="150" y="490" width="700" height="65" rx="14" fill="#222"/>
+    <text x="500" y="530" fill="#fff" font-size="25" font-family="Arial" text-anchor="middle">GeometryDash</text>
+  </a>
+
+  <a href="niche/index.svg" target="_blank">
+    <rect x="150" y="580" width="700" height="65" rx="14" fill="#222"/>
+    <text x="500" y="620" fill="#fff" font-size="25" font-family="Arial" text-anchor="middle">Niche</text>
   </a>
 
   <a href="securly.svg" target="_blank">
-    <rect x="150" y="285" width="700" height="75"
-          rx="14" fill="#222"/>
-    <text x="500" y="332"
-          fill="#fff" font-size="25"
-          font-family="Arial"
-          text-anchor="middle">Securly</text>
+    <rect x="150" y="670" width="700" height="65" rx="14" fill="#222"/>
+    <text x="500" y="710" fill="#fff" font-size="25" font-family="Arial" text-anchor="middle">Securly</text>
   </a>
 
   <a href="svg/icon.svg" target="_blank">
-    <rect x="150" y="390" width="700" height="75"
-          rx="14" fill="#222"/>
-    <text x="500" y="437"
-          fill="#fff" font-size="25"
-          font-family="Arial"
-          text-anchor="middle">Opium</text>
+    <rect x="150" y="760" width="700" height="65" rx="14" fill="#222"/>
+    <text x="500" y="800" fill="#fff" font-size="25" font-family="Arial" text-anchor="middle">Opium</text>
   </a>
 
-  <a href="catclass.svg" target="_blank">
-    <rect x="150" y="495" width="700" height="75"
-          rx="14" fill="#222"/>
-    <text x="500" y="542"
-          fill="#fff" font-size="25"
-          font-family="Arial"
-          text-anchor="middle">CatClass</text>
+  <a href="space/index.svg" target="_blank">
+    <rect x="150" y="850" width="700" height="65" rx="14" fill="#222"/>
+    <text x="500" y="890" fill="#fff" font-size="25" font-family="Arial" text-anchor="middle">Space</text>
   </a>
-
-  <a href="arsenic.svg" target="_blank">
-    <rect x="150" y="600" width="700" height="75"
-          rx="14" fill="#222"/>
-    <text x="500" y="647"
-          fill="#fff" font-size="25"
-          font-family="Arial"
-          text-anchor="middle">Arsenic</text>
-  </a>
-
 </svg>

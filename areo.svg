@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="none"><title>aeos v4</title><rect id="aeos-backdrop" x="0" y="0" width="100%" height="100%" fill="#0a0c12"/><text id="aeos-status" x="24" y="40" fill="#8b93a7" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="14">loading aeos v4&#8230;</text><script type="text/javascript"><![CDATA[
+(function(){
+var REPO="aeosntw/v4",REF="main",PREFIX_CANDIDATES=["dist/",""],MARKER="router-auto.js",SHA_CACHE_KEY="aeos_build_sha",SHA_CACHE_TTL_MS=18e5,REF_API="https://api.github.com/repos/"+REPO+"/git/refs/heads/"+REF,SVG_NS="http://www.w3.org/2000/svg",XHTML_NS="http://www.w3.org/1999/xhtml";
+function rootFor(ref,prefix){return "https://cdn.jsdelivr.net/gh/"+REPO+"@"+ref+"/"+prefix;}
+function status(text){try{var node=document.getElementById("aeos-status");if(node)node.textContent=text;}catch(e){}}
+function fail(message){status("aeos v4 could not load: "+message);try{document.getElementById("aeos-status").setAttribute("fill","#ff8080");}catch(e){}}
+function readCachedSha(){try{var raw=localStorage.getItem(SHA_CACHE_KEY);if(!raw)return "";var entry=JSON.parse(raw);if(!entry||!/^[0-9a-f]{40}$/.test(entry.sha))return "";if(Date.now()-entry.at>SHA_CACHE_TTL_MS)return "";return entry.sha;}catch(e){return "";}}
+function writeCachedSha(sha){try{localStorage.setItem(SHA_CACHE_KEY,JSON.stringify({sha:sha,at:Date.now()}));}catch(e){}}
+function forgetCachedSha(){try{localStorage.removeItem(SHA_CACHE_KEY);}catch(e){}}
+function resolveRef(){var cached=readCachedSha();if(cached)return Promise.resolve(cached);return fetch(REF_API,{cache:"no-store"}).then(function(r){return r.ok?r.json():null;}).then(function(data){var sha=data&&data.object&&data.object.sha;if(!/^[0-9a-f]{40}$/.test(String(sha)))return REF;writeCachedSha(sha);return sha;}).catch(function(){return REF;});}
+function dirOf(url){return String(url).replace(/[?#].*$/,"").replace(/[^\/]*$/,"");}
+function searchOf(url){var m=/\?[^#]*/.exec(String(url));return m?m[0]:"";}
+function detectOpaqueOrigin(){try{var url=URL.createObjectURL(new Blob([""],{type:"text/plain"})),opaque=/^blob:null\//i.test(String(url));try{URL.revokeObjectURL(url);}catch(e){}return opaque;}catch(e){try{return location.protocol==="file:";}catch(e2){return false;}}}
+var OPAQUE_ORIGIN=detectOpaqueOrigin();
+function selfFileName(){try{var path=location.pathname.replace(/\/+$/,"");return decodeURIComponent(path.slice(path.lastIndexOf("/")+1))||"this file";}catch(e){return "this file";}}
+function hostHintJson(root){return JSON.stringify({mode:"singlefile",base:root,file:selfFileName(),opaqueOrigin:OPAQUE_ORIGIN});}
+function buildBootstrap(root){return [
+'(function(){',
+'var ROOT='+JSON.stringify(root)+';',
+'var HOSTJSON='+JSON.stringify(hostHintJson(root))+';',
+'var OPEN="<"+"script>",CLOSE="<"+"/"+"script>";',
+'var IS_APP_TOP=!!window.__AEOS_TOP__;',
+'var SEARCH=String(window.__AEOS_SEARCH__||"");',
+'function baseNow(){try{return document.baseURI||ROOT;}catch(e){return ROOT;}}',
+'function dirOf(url){return String(url).replace(/[?#].*$/,"").replace(/[^\\/]*$/,"");}',
+'function searchOf(url){var m=/\\?[^#]*/.exec(String(url));return m?m[0]:"";}',
+'function installUrlShim(){var Native=window.URL;if(!Native||Native.__aeosShimmed)return;function Shim(input,base){if(arguments.length<2||base===undefined)return new Native(input);try{return new Native(input,base);}catch(e){return new Native(input,baseNow());}}Shim.prototype=Native.prototype;Object.getOwnPropertyNames(Native).forEach(function(key){if(key==="prototype"||key==="length"||key==="name")return;var value=Native[key];Shim[key]=typeof value==="function"?value.bind(Native):value;});Shim.__aeosShimmed=true;try{window.URL=Shim;}catch(e){}}',
+'installUrlShim();',
+'function installSearchShim(){var Native=window.URLSearchParams;if(!Native||Native.__aeosShimmed)return;function Shim(init){if(arguments.length===1&&(init===""||init===null||init===undefined))return new Native(SEARCH);return arguments.length?new Native(init):new Native();}Shim.prototype=Native.prototype;Object.getOwnPropertyNames(Native).forEach(function(key){if(key==="prototype"||key==="length"||key==="name")return;var value=Native[key];Shim[key]=typeof value==="function"?value.bind(Native):value;});Shim.__aeosShimmed=true;try{window.URLSearchParams=Shim;}catch(e){}}',
+'if(SEARCH){try{if(!location.search)installSearchShim();}catch(e){installSearchShim();}}',
+'function installHistoryShim(){var h=window.history;if(!h||h.__aeosShimmed)return;var nativePush=h.pushState,nativeReplace=h.replaceState;if(typeof nativePush!=="function"||typeof nativeReplace!=="function")return;function wrap(native){return function(state,title,url){try{return native.apply(h,arguments);}catch(e){}if(url===undefined||url===null)return;var next=searchOf(url);if(next===SEARCH)return;SEARCH=next;installSearchShim();};}try{h.pushState=wrap(nativePush);h.replaceState=wrap(nativeReplace);h.__aeosShimmed=true;}catch(e){}}',
+'installHistoryShim();',
+'function installTopAlias(){try{if(window.self===window.top)return;}catch(e){return;}try{window.self=window.top;}catch(e){}}',
+'if(IS_APP_TOP){try{if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",installTopAlias);else installTopAlias();}catch(e){}}',
+'function absolute(rel){try{return new URL(String(rel),baseNow()).href;}catch(e){return "";}}',
+'function isOurPage(rel){var value=String(rel==null?"":rel);if(!value)return false;if(/^(about:|blob:|javascript:|data:|mailto:)/i.test(value))return false;var url=absolute(value);if(!url||url.indexOf(ROOT)!==0)return false;var path=url.slice(ROOT.length).split("?")[0].split("#")[0];return /\\.html?$/i.test(path);}',
+'function injectInto(h,pageUrl){var base=dirOf(pageUrl)||ROOT;var head=OPEN+"var __AEOS_HOST__="+HOSTJSON+";"+CLOSE+OPEN+"var __AEOS_TOP__=false;"+CLOSE+OPEN+"var __AEOS_SEARCH__="+JSON.stringify(searchOf(pageUrl))+";"+CLOSE+OPEN+"var __AEOS_BOOT__="+JSON.stringify(__AEOS_BOOT__)+";(0,eval)(__AEOS_BOOT__);"+CLOSE;var tag=\'<base href="\'+base+\'">\'+head;if(/<head[^>]*>/i.test(h))return h.replace(/<head([^>]*)>/i,"<head$1>"+tag);return tag+h;}',
+'function loadInto(iframe,rel){var url=absolute(String(rel).split("#")[0]);fetch(url,{cache:"no-store"}).then(function(r){if(!r.ok)throw new Error("HTTP "+r.status);return r.text();}).then(function(h){iframe.srcdoc=injectInto(h,url);}).catch(function(e){iframe.srcdoc="<p style=\\"color:#fff;font:14px system-ui;padding:1rem\\">aeos: failed to load "+rel+": "+e+"</p>";});}',
+'var proto=HTMLIFrameElement.prototype,descriptor=Object.getOwnPropertyDescriptor(proto,"src");',
+'if(descriptor&&descriptor.set){Object.defineProperty(proto,"src",{configurable:true,get:descriptor.get,set:function(v){if(isOurPage(v)){loadInto(this,v);}else{descriptor.set.call(this,v);}}});}',
+'var nativeSetAttribute=Element.prototype.setAttribute;',
+'Element.prototype.setAttribute=function(name,value){if(name==="src"&&this instanceof HTMLIFrameElement&&isOurPage(value)){loadInto(this,value);return;}return nativeSetAttribute.call(this,name,value);};',
+'})();'
+].join("\n");}
+function injectInto(html,pageUrl,root,isAppTop){var base=dirOf(pageUrl)||root,boot=buildBootstrap(root),tag='<base href="'+base+'">'+'<'+'script>var __AEOS_HOST__='+hostHintJson(root)+';<'+'/'+'script>'+'<'+'script>var __AEOS_TOP__='+(isAppTop?'true':'false')+';<'+'/'+'script>'+'<'+'script>var __AEOS_SEARCH__='+JSON.stringify(searchOf(pageUrl))+';<'+'/'+'script>'+'<'+'script>var __AEOS_BOOT__='+JSON.stringify(boot)+';(0,eval)(__AEOS_BOOT__);<'+'/'+'script>';if(/<head[^>]*>/i.test(html))return html.replace(/<head([^>]*)>/i,'<head$1>'+tag);return tag+html;}
+function mount(markup){var host=document.createElementNS(SVG_NS,"foreignObject");host.setAttribute("x","0");host.setAttribute("y","0");host.setAttribute("width","100%");host.setAttribute("height","100%");var frame=document.createElementNS(XHTML_NS,"iframe");frame.setAttribute("id","aeos-app");frame.setAttribute("style","display:block;width:100%;height:100%;border:0");frame.setAttribute("allowfullscreen","allowfullscreen");frame.srcdoc=markup;host.appendChild(frame);document.documentElement.appendChild(host);try{document.getElementById("aeos-status").textContent="";}catch(e){}}
+function firstUsableRoot(roots,index){index=index||0;if(index>=roots.length)return Promise.reject(new Error("no complete build found for "+REPO));var root=roots[index];return fetch(root+MARKER,{cache:"no-store"}).then(function(r){return r.ok?root:firstUsableRoot(roots,index+1);}).catch(function(){return firstUsableRoot(roots,index+1);});}
+function candidateRoots(ref){var roots=[],i;for(i=0;i<PREFIX_CANDIDATES.length;i++)roots.push(rootFor(ref,PREFIX_CANDIDATES[i]));if(ref!==REF){for(i=0;i<PREFIX_CANDIDATES.length;i++)roots.push(rootFor(REF,PREFIX_CANDIDATES[i]));}return roots;}
+status("resolving build\u2026");
+resolveRef().then(function(ref){return firstUsableRoot(candidateRoots(ref)).then(function(root){if(ref!==REF&&root.indexOf("@"+ref+"/")===-1)forgetCachedSha();return root;});}).then(function(root){status("loading app\u2026");var entry=root+"index.html";return fetch(entry,{cache:"no-store"}).then(function(r){if(!r.ok)throw new Error("HTTP "+r.status);return r.text();}).then(function(html){mount(injectInto(html,entry,root,true));});}).catch(function(e){fail(String(e));});
+})();
+]]></script></svg>

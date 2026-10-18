@@ -1,0 +1,9 @@
+{
+  "name": "securly-assets",
+  "version": "1.0.4",
+  "description": "SVG assets",
+  "files": [
+    "*.svg",
+    "svg"
+  ]
+}
